@@ -1,0 +1,37 @@
+header {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Background color for the header */
+  color: white; /* Text color */
+  padding: 20px 0; /* Padding for some spacing */
+  z-index: 1000; /* Ensures the header is above other elements */
+}
+
+nav ul {
+  list-style-type: none; /* Remove default list style */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+  margin: 0 15px; /* Spacing between the navigation items */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Text color for links */
+  font-weight: bold; /* Bold text for links */
+}
+
+nav ul li a:hover {
+  color: #ddd; /* Lighter color on hover */
+}
+
+/* To ensure content doesn't get hidden behind the fixed header */
+body {
+  padding-top: 0px; /* Adjust based on header height */
+}
