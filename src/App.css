@@ -8,7 +8,8 @@ body {
   font-size: large;
   margin: 0;
   padding: 0;
-  background-color: #77b7ec;
+  background-color: #d9d9d9;
+
   color: #000000;
 }
 
@@ -43,7 +44,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: xx-large;
+  font-size: 60px;
   color: #000000;
 }
 

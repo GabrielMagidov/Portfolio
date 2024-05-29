@@ -3,7 +3,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333; /* Background color for the header */
+  background-color: #284b63; /* Background color for the header */
   color: white; /* Text color */
   padding: 20px 0; /* Padding for some spacing */
   z-index: 1000; /* Ensures the header is above other elements */
