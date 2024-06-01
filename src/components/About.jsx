@@ -24,7 +24,7 @@ export default function About() {
           </p>
         </div>
         <div className="about-image">
-          <img src={about_me_photo} alt="about me photo" />
+          <img src={about_me_photo} alt="about me" />
         </div>
       </div>
     </section>
