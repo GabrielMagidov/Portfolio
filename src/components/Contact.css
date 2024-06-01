@@ -1,3 +1,7 @@
 #contact {
   text-align: center; /* Center-align the entire section */
 }
+
+p {
+  font-size: 20px;
+}

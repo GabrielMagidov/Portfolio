@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: center; /* Center-align links horizontally */
   align-items: center; /* Center-align links vertically */
-  margin-top: 0; /* Optional: Add margin to separate from section content */
+  margin-top: 15px; /* Optional: Add margin to separate from section content */
 }
 
 .contact-links a {
@@ -17,5 +17,5 @@
 }
 
 .contact-links a:hover {
-  color: #007bff; /* Optional: Change color on hover */
+  color: #0f114e; /* Optional: Change color on hover */
 }

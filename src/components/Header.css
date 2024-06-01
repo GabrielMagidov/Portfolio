@@ -1,9 +1,9 @@
 header {
-  position: static;
+  position: static; /* Ensure the header behaves normally in the document flow */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #284b63; /* Background color for the header */
+  background-color: transparent; /* Transparent background for the header */
   color: white; /* Text color */
   padding: 20px 0; /* Padding for some spacing */
   z-index: 1000; /* Ensures the header is above other elements */
@@ -21,17 +21,31 @@ nav ul li {
   margin: 0 15px; /* Spacing between the navigation items */
 }
 
-nav ul li a {
-  text-decoration: none; /* Remove underline from links */
-  color: white; /* Text color for links */
-  font-weight: bold; /* Bold text for links */
+.NavButton {
+  background: none;
+  color: white;
+  border: none;
+  box-shadow: none;
+  font-size: 25px;
+  font-weight: normal;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 1rem 2rem;
+  width: 200px;
 }
 
-nav ul li a:hover {
-  color: #ddd; /* Lighter color on hover */
-}
-
-/* To ensure content doesn't get hidden behind the fixed header */
-body {
-  padding-top: 0px; /* Adjust based on header height */
+.NavButton:hover {
+  background-color: #0f114e;
 }

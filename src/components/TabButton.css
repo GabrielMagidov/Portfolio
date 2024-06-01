@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-button {
+.tab-button {
   background-color: #fff;
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
@@ -24,9 +22,21 @@ button {
   font-size: 1.125rem;
   padding: 1rem 2rem;
   border: #0d172a solid 2px;
+  width: 200px;
 }
 
-button:hover {
-  background-color: #1e293b;
+.tab-button:hover {
+  background-color: #5b35a1;
+  color: #fff;
+}
+
+.tab-button.active {
+  background-color: #5b35a1;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px 0px inset;
+}
+
+.tab-button.active:hover {
+  background-color: #5b35a1;
   color: #fff;
 }

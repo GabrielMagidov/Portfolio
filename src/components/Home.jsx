@@ -1,12 +1,26 @@
 import React from "react";
 import "./Home.css";
 import ContactLinks from "./ContactLinks";
+import cover_photo from "../cover photo.png";
+import cv_file from "../cv.pdf"; // Adjust the path based on your actual file location
 
 export default function Home() {
+  const downloadFileName = "Gabriel_Magidov_CV.pdf"; // Specify the desired filename
+
   return (
-    <section id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <ContactLinks />
-    </section>
+    <div className="container">
+      <section id="home">
+        <h1>Gabriel Magidov</h1>
+        <p>
+          3rd year Computer Science student at Ben-Gurion University of the
+          Negev
+        </p>
+        <ContactLinks />
+        <a className="cvButton" href={cv_file} download={downloadFileName}>
+          Download CV
+        </a>
+      </section>
+      <img src={cover_photo} alt='print("Hello World")' />
+    </div>
   );
 }

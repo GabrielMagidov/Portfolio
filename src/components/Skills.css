@@ -1,0 +1,32 @@
+#skills {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-bubble {
+  background-color: #1a134d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.skill-bubble h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.skill-bubble p {
+  margin: 0;
+  color: white;
+  text-align: center;
+}

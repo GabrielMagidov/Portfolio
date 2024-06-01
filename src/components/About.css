@@ -1,4 +1,31 @@
-/* About.css */
 #about {
-  text-align: center;
+  text-align: center; /* Centers the content horizontally */
+  padding-bottom: 50px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+}
+
+.about-text {
+  flex: 1; /* Take up remaining space */
+  text-align: left; /* Align text to the left */
+  padding-right: 20px; /* Adjust spacing between text and image */
+  max-width: 600px; /* Example: Adjust maximum width as needed */
+  font-size: 27px;
+}
+
+.about-image {
+  width: 350px; /* Adjust width of the image container */
+  height: 350px; /* Adjust height of the image container */
+  margin-left: 20px; /* Adjust margin between text and image */
+}
+
+h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+p {
+  font-size: 27px;
 }

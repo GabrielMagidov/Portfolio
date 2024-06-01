@@ -1,34 +1,77 @@
-#projects {
+#project {
   text-align: center;
+  background-color: #1a134d;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  width: 900px;
+  align-items: center;
+  margin: 0px auto;
+  padding-top: 5px;
+  padding-bottom: 40px;
+  height: 450px;
 }
 
-.tab-buttons-container {
+.projects-container {
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  margin-bottom: 20px; /* Optional: Add margin to separate from Tabs */
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  text-align: center; /* Center text in the container */
+}
+
+.tab-buttons-column {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Align buttons to the left */
+  margin-right: 20px; /* Optional: Add margin between buttons and tab content */
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .tab-buttons-list {
-  list-style-type: none; /* Remove default list styles */
-  display: flex;
-  flex-direction: row; /* Stack items horizontally */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style-type: none;
+  padding-left: 30px;
+  margin: 0;
 }
 
 .tab-buttons-list li {
-  margin-right: 10px; /* Optional: Adjust spacing between buttons */
+  margin-bottom: 10px; /* Optional: Adjust spacing between buttons */
+}
+
+.tab-buttons-list p {
+  text-align: center;
+}
+
+.TabButton {
+  width: 200px; /* Fixed width for each button */
+}
+
+.tab-content-container {
+  flex: 1; /* Take remaining space */
+  text-align: center;
+}
+
+.tab-content {
+  text-align: center; /* Align content to the left */
+  max-width: 600px; /* Adjust as needed */
 }
 
 .tab-content a {
-  color: black;
+  color: white;
+  display: block; /* Ensure anchor behaves like a block element */
+  margin-bottom: 0px; /* Increase margin between anchor and paragraphs */
+  padding-top: 20px;
 }
 
 .tab-content a:hover {
-  color: #007bff;
+  color: #c1a9ee;
 }
 
 .description {
   text-align: center;
+  margin-bottom: 20px; /* Increase margin between paragraphs */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
