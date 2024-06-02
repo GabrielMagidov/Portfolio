@@ -8,7 +8,7 @@ export default function About() {
       <h2>About Me</h2>
       <div className="about-content">
         <div className="about-text">
-          <p>
+          <p className="pText">
             I am a highly motivated 3rd year Computer
             <br /> Science student at Ben-Gurion University
             <br /> of the Negev, currently in my last semester.
