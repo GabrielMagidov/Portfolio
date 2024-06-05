@@ -1,21 +1,25 @@
+/* Base Styles */
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Space between items */
+  flex-wrap: nowrap; /* No wrapping */
+  padding: 20px;
+  max-width: 1200px; /* Adjust the maximum width of the container */
+  margin: auto; /* Center the container */
 }
 
 #home {
   text-align: left;
-  margin: 0; /* Remove default margins */
-  flex: 1; /* Take up equal space */
-  padding: 0; /* Add padding for spacing */
-  box-sizing: border-box; /* Include padding in width calculation */
+  margin: 0;
+  flex: 0 0 15%; /* Take up 15% of the container width */
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   padding-bottom: 70px;
-  padding-top: 20px;
 }
 
 .contact-links {
@@ -23,11 +27,10 @@
   padding: 0;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  flex: 1;
 }
 
 p {
-  margin-top: 0px;
+  margin-top: 0;
   padding-top: 0;
 }
 
@@ -38,10 +41,11 @@ h1 {
 }
 
 img {
-  flex: 1;
-  max-width: 85%;
-  height: auto;
-  padding: 0px;
+  width: 100%; /* Ensure image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Limit maximum width to its container */
+  display: block; /* Ensure image is treated as a block element */
+  margin: 20px 0; /* Adjust spacing around the image */
   box-sizing: border-box;
 }
 
@@ -54,7 +58,7 @@ img {
   border-radius: 1.5rem;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block;
+  display: block; /* Changed to block to center */
   font-family: "Roboto", sans-serif;
   line-height: 1;
   text-align: center;
@@ -66,7 +70,7 @@ img {
   touch-action: manipulation;
   padding: 1rem 2rem;
   width: 200px;
-  margin: auto;
+  margin: 10px auto; /* Reduce the margin to decrease horizontal space */
   border: white solid 2px;
 }
 
@@ -74,4 +78,64 @@ img {
   color: #0f114e;
   background-color: white;
   border: #0f114e solid 2px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%; /* Ensure container adapts to smaller screens */
+    justify-content: center; /* Center content on larger tablets */
+  }
+
+  #home {
+    flex: 0 0 25%;
+  }
+
+  img {
+    flex: 1 0 80%; /* Take up 80% of the container width */
+    max-width: 80%; /* Limit width to 80% of the container width */
+    margin: 20px 0; /* Adjust spacing for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home {
+    padding: 10px;
+    padding-top: 20px;
+    flex: 0 0 100%;
+  }
+
+  img {
+    flex: 1 0 90%; /* Take up 90% of the container width */
+    max-width: 90%; /* Limit width to 90% of the container width */
+    margin: 20px 0; /* Adjust spacing for smaller screens */
+  }
+
+  .cvButton {
+    font-size: 18px;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .cvButton {
+    font-size: 16px;
+    padding: 0.6rem 1rem;
+  }
+
+  img {
+    flex: 1 0 95%; /* Take up 95% of the container width */
+    max-width: 95%; /* Limit width to 95% of the container width */
+    margin: 20px 0; /* Adjust spacing for smaller screens */
+  }
 }

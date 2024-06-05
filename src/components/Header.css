@@ -15,6 +15,7 @@ nav ul {
   padding: 0;
   display: flex; /* Flexbox for horizontal layout */
   justify-content: center; /* Center the navigation items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 nav ul li {
@@ -48,4 +49,47 @@ nav ul li {
 
 .NavButton:hover {
   background-color: #0f114e;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  .NavButton {
+    font-size: 20px; /* Adjust font size for tablets */
+    padding: 1rem 1.5rem; /* Adjust padding for tablets */
+    width: 180px; /* Adjust width for tablets */
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Adjust spacing between items for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack navigation items vertically on small screens */
+    align-items: center; /* Center align the items */
+  }
+
+  .NavButton {
+    font-size: 18px; /* Adjust font size for small screens */
+    padding: 1rem 1.2rem; /* Adjust padding for small screens */
+    width: 160px; /* Adjust width for small screens */
+    margin: 10px 0; /* Add margin between buttons on small screens */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Adjust spacing between items for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0; /* Adjust padding for mobile devices */
+  }
+
+  .NavButton {
+    font-size: 16px; /* Adjust font size for mobile devices */
+    padding: 0.8rem 1rem; /* Adjust padding for mobile devices */
+    width: 140px; /* Adjust width for mobile devices */
+  }
 }

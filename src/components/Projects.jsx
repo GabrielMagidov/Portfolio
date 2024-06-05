@@ -17,7 +17,7 @@ export default function Projects() {
   let tabContent = (
     <div className="tab-content" id="tab-content">
       <p className="description">{PROJECTS[selectedTopic].description}</p>
-      <p>
+      <p className="skills_p">
         {"Skills: "}
         {PROJECTS[selectedTopic].skills}
       </p>

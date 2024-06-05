@@ -1,65 +1,64 @@
 #project {
   text-align: center;
   background-color: #1a134d;
-  border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
-  width: 900px;
-  align-items: center;
-  margin: 0px auto;
-  padding-top: 5px;
-  padding-bottom: 40px;
-  height: 450px;
+  width: 70%; /* Adjusted width for responsiveness */
+  max-width: 100%; /* Ensure it spans the full width on smaller screens */
+  margin: 20px auto; /* Center and add margin */
+  padding: 30px; /* Adjusted padding */
+  box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 .projects-container {
   display: flex;
+  flex-direction: column; /* Stack vertically on small screens */
   justify-content: center;
-  align-items: flex-start; /* Align items to the top */
-  text-align: center; /* Center text in the container */
+  align-items: center; /* Center align */
+  text-align: center;
 }
 
 .tab-buttons-column {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
-  align-items: center; /* Align buttons to the left */
-  margin-right: 20px; /* Optional: Add margin between buttons and tab content */
-  margin-top: 0;
-  padding-top: 0;
+  align-items: center;
+  margin-bottom: 20px; /* Space between buttons and content on small screens */
+  width: 100%; /* Full width for smaller screens */
 }
 
 .tab-buttons-list {
   list-style-type: none;
-  padding-left: 30px;
+  padding: 0; /* Reset padding */
   margin: 0;
 }
 
 .tab-buttons-list li {
-  margin-bottom: 10px; /* Optional: Adjust spacing between buttons */
-}
-
-.tab-buttons-list p {
-  text-align: center;
+  margin-bottom: 10px; /* Spacing between buttons */
 }
 
 .TabButton {
-  width: 200px; /* Fixed width for each button */
+  width: 100%; /* Full width for buttons */
+  max-width: 200px; /* Max width for larger screens */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
 .tab-content-container {
-  flex: 1; /* Take remaining space */
-  text-align: center;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
 }
 
 .tab-content {
-  text-align: center; /* Align content to the left */
-  max-width: 600px; /* Adjust as needed */
+  text-align: center;
+  max-width: 600px;
+  width: 100%; /* Full width */
 }
 
 .tab-content a {
   color: white;
-  display: block; /* Ensure anchor behaves like a block element */
-  margin-bottom: 0px; /* Increase margin between anchor and paragraphs */
+  display: block;
+  margin-bottom: 20px;
   padding-top: 20px;
+  font-size: 1.25rem;
 }
 
 .tab-content a:hover {
@@ -68,10 +67,43 @@
 
 .description {
   text-align: justify;
-  margin-bottom: 20px; /* Increase margin between paragraphs */
+  margin-bottom: 20px;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 2rem; /* Adjust font size for better responsiveness */
+}
+
+.skills_p {
+  text-align: left;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  .projects-container {
+    flex-direction: row; /* Side by side on larger screens */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .tab-buttons-column {
+    margin-right: 20px; /* Margin between buttons and content */
+    margin-bottom: 0; /* Remove bottom margin */
+    width: auto; /* Auto width for larger screens */
+  }
+
+  .TabButton {
+    width: 200px; /* Fixed width for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  #project {
+    padding: 40px; /* Increase padding on larger screens */
+  }
+
+  h2 {
+    font-size: 2.5rem; /* Increase font size for larger screens */
+  }
 }

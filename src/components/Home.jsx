@@ -16,11 +16,15 @@ export default function Home() {
           Negev
         </p>
         <ContactLinks />
-        <a className="cvButton" href={cv_file} download={downloadFileName}>
-          Download CV
-        </a>
+        <div className="cvButtonContainer">
+          <a className="cvButton" href={cv_file} download={downloadFileName}>
+            Download CV
+          </a>
+        </div>
       </section>
-      <img src={cover_photo} alt='print("Hello World")' />
+      <div className="cover-photo">
+        <img src={cover_photo} alt='print("Hello World")' />
+      </div>
     </div>
   );
 }
