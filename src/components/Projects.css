@@ -137,3 +137,41 @@ h2 {
     text-align: center; /* Center text for smaller screens */
   }
 }
+
+/* Media queries for smaller phones */
+@media (max-width: 480px) {
+  #project {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+    min-height: auto; /* Adjust minimum height */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .tab-content a {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .description {
+    text-align: center; /* Center text for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .skills_p {
+    text-align: center; /* Center text for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .tab-buttons-list,
+  .tab-buttons-list li {
+    text-align: center; /* Center text for buttons */
+    width: 100%;
+  }
+
+  .TabButton {
+    width: auto; /* Adjust width for smaller screens */
+    max-width: 100%;
+  }
+}

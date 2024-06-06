@@ -142,6 +142,11 @@ img {
   img {
     flex: 1 0 95%; /* Take up 95% of the container width */
     max-width: 95%; /* Limit width to 95% of the container width */
-    margin: 20px 0; /* Adjust spacing for smaller screens */
+    margin: 20px auto; /* Center the image on smaller screens */
+    display: block; /* Centering fix */
+  }
+
+  .home_p {
+    font-size: 0.875rem;
   }
 }

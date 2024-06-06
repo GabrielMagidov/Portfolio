@@ -15,7 +15,7 @@ nav ul {
   padding: 0;
   display: flex; /* Flexbox for horizontal layout */
   justify-content: center; /* Center the navigation items */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  flex-wrap: wrap; /* Allow items to wrap */
 }
 
 nav ul li {
@@ -87,9 +87,19 @@ nav ul li {
     padding: 10px 0; /* Adjust padding for mobile devices */
   }
 
+  nav ul {
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space out items */
+  }
+
+  nav ul li {
+    width: 48%; /* Take up nearly half the width for two columns */
+    margin: 5px 0; /* Add margin between items */
+  }
+
   .NavButton {
     font-size: 14px; /* Adjust font size for mobile devices */
     padding: 0.8rem 1rem; /* Adjust padding for mobile devices */
-    width: 100px; /* Adjust width for mobile devices */
+    width: 100%; /* Full width within the li element */
   }
 }

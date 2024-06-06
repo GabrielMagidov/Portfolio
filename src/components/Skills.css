@@ -61,6 +61,10 @@
 }
 
 @media (max-width: 480px) {
+  #skills {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
   .skills-grid {
     gap: 10px; /* Reduce gap for very small screens */
   }
