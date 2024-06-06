@@ -142,7 +142,7 @@ h2 {
 @media (max-width: 480px) {
   #project {
     width: 90%; /* Adjust width for smaller screens */
-    padding: 15px; /* Adjust padding for smaller screens */
+    padding: 0px; /* Adjust padding for smaller screens */
     min-height: auto; /* Adjust minimum height */
   }
 
@@ -171,7 +171,9 @@ h2 {
   }
 
   .TabButton {
-    width: auto; /* Adjust width for smaller screens */
-    max-width: 100%;
+    width: 100%; /* Full width for buttons */
+    max-width: 150px; /* Max width for larger screens */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
 }
