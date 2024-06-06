@@ -2,11 +2,13 @@
   text-align: center;
   background-color: #1a134d;
   border-radius: 1.5rem;
-  width: 70%; /* Adjusted width for responsiveness */
+  width: 64%; /* Adjusted width for responsiveness */
   max-width: 100%; /* Ensure it spans the full width on smaller screens */
   margin: 20px auto; /* Center and add margin */
-  padding: 30px; /* Adjusted padding */
+  padding: 20px 10px 20px 20px; /* Reduced right padding */
   box-sizing: border-box; /* Include padding and border in width/height */
+  height: auto; /* Make height auto for flexibility */
+  min-height: 550px; /* Ensure minimum height */
 }
 
 .projects-container {
@@ -49,8 +51,10 @@
 
 .tab-content {
   text-align: center;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%; /* Full width */
+  padding-right: 0; /* Remove right padding */
+  margin-right: 0; /* Remove right margin */
 }
 
 .tab-content a {
@@ -100,10 +104,36 @@ h2 {
 
 @media (min-width: 1024px) {
   #project {
-    padding: 40px; /* Increase padding on larger screens */
+    padding: 30px; /* Adjust padding for larger screens */
   }
 
   h2 {
     font-size: 2.5rem; /* Increase font size for larger screens */
+  }
+}
+
+/* Media queries for phones */
+@media (max-width: 767px) {
+  #project {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+    min-height: auto; /* Adjust minimum height */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .tab-content a {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .description {
+    text-align: center; /* Center text for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .skills_p {
+    text-align: center; /* Center text for smaller screens */
   }
 }

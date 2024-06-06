@@ -88,8 +88,8 @@ nav ul li {
   }
 
   .NavButton {
-    font-size: 16px; /* Adjust font size for mobile devices */
+    font-size: 14px; /* Adjust font size for mobile devices */
     padding: 0.8rem 1rem; /* Adjust padding for mobile devices */
-    width: 140px; /* Adjust width for mobile devices */
+    width: 100px; /* Adjust width for mobile devices */
   }
 }

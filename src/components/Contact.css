@@ -1,11 +1,12 @@
+/* contact.css */
 #contact {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center-align the entire section horizontally */
   justify-content: center; /* Center-align the entire section vertically */
   height: 100vh; /* Full viewport height */
-  padding: 20px 20px 0 20px; /* Adjust padding for spacing, remove bottom padding */
-  margin-bottom: 0; /* Ensure no bottom margin */
+  padding: 0px 20px 0px 20px; /* Adjust padding for spacing, remove bottom padding */
+  position: static;
   bottom: 0;
 }
 

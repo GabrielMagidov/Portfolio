@@ -11,7 +11,7 @@ export default function Home() {
     <div className="container">
       <section id="home">
         <h1>Gabriel Magidov</h1>
-        <p>
+        <p className="home_p">
           3rd year Computer Science student at Ben-Gurion University of the
           Negev
         </p>

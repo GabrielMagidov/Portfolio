@@ -1,7 +1,8 @@
 #skills {
   text-align: center;
   margin: 100px 0 20px 0; /* Increase top margin, decrease bottom margin */
-  padding: 0 20px; /* Add padding for smaller screens */
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .skills-grid {
