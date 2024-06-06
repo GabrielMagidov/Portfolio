@@ -40,3 +40,18 @@
   background-color: #5b35a1;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    padding: 0.8rem 1.2rem; /* Adjust padding for smaller screens */
+    max-width: 160px; /* Max width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    font-size: 0.85rem; /* Adjust font size for extra small screens */
+    padding: 0.7rem 1rem; /* Adjust padding for extra small screens */
+    max-width: 140px; /* Max width for extra small screens */
+  }
+}

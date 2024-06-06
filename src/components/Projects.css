@@ -142,7 +142,7 @@ h2 {
 @media (max-width: 480px) {
   #project {
     width: 90%; /* Adjust width for smaller screens */
-    padding: 0px; /* Adjust padding for smaller screens */
+    padding: 5px; /* Adjust padding for smaller screens */
     min-height: auto; /* Adjust minimum height */
   }
 
@@ -175,5 +175,10 @@ h2 {
     max-width: 150px; /* Max width for larger screens */
     box-sizing: border-box; /* Include padding and border in width */
     font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+  .tab-buttons-column {
+    margin-right: 5px; /* Margin between buttons and content */
+    margin-bottom: 0; /* Remove bottom margin */
+    width: auto; /* Auto width for larger screens */
   }
 }
