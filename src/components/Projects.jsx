@@ -33,8 +33,8 @@ export default function Projects() {
 
   return (
     <>
-      <h2>My projects</h2>
       <Section id="project">
+        <h2>My projects</h2>
         <div className="projects-container">
           <div className="tab-buttons-column">
             <ul className="tab-buttons-list">
@@ -73,7 +73,7 @@ export default function Projects() {
             </ul>
           </div>
           <div className="tab-content-container">
-            <Tabs>{tabContent}</Tabs>
+            <Tabs ButtonsContainer="div">{tabContent}</Tabs>
           </div>
         </div>
       </Section>

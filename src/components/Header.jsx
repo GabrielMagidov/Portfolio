@@ -2,6 +2,14 @@ import React from "react";
 import "./Header.css";
 
 const Header = () => {
+  const openNav = () => {
+    document.getElementById("myNav").style.width = "100%";
+  };
+
+  const closeNav = () => {
+    document.getElementById("myNav").style.width = "0%";
+  };
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -10,54 +18,26 @@ const Header = () => {
         behavior: "smooth",
       });
     }
+    closeNav();
   };
 
   return (
     <header>
-      <nav>
-        <ul>
-          <li>
-            <button
-              className="NavButton"
-              onClick={() => scrollToSection("home")}
-            >
-              Home
-            </button>
-          </li>
-          <li>
-            <button
-              className="NavButton"
-              onClick={() => scrollToSection("about")}
-            >
-              About Me
-            </button>
-          </li>
-          <li>
-            <button
-              className="NavButton"
-              onClick={() => scrollToSection("projects")}
-            >
-              My Projects
-            </button>
-          </li>
-          <li>
-            <button
-              className="NavButton"
-              onClick={() => scrollToSection("skills")}
-            >
-              Skills
-            </button>
-          </li>
-          <li>
-            <button
-              className="NavButton"
-              onClick={() => scrollToSection("contact")}
-            >
-              Contact Me
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <div style={{ display: "relative" }}>
+        <span onClick={openNav}>&#9776;</span>
+      </div>
+      <div id="myNav" className="overlay">
+        <a className="closebtn" onClick={closeNav}>
+          &times;
+        </a>
+        <div className="overlay-content">
+          <a onClick={() => scrollToSection("home")}>Home</a>
+          <a onClick={() => scrollToSection("about")}>About Me</a>
+          <a onClick={() => scrollToSection("projects")}>My Projects</a>
+          <a onClick={() => scrollToSection("skills")}>Skills</a>
+          <a onClick={() => scrollToSection("contact")}>Contact Me</a>
+        </div>
+      </div>
     </header>
   );
 };

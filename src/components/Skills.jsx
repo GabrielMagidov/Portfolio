@@ -8,7 +8,7 @@ export default function Skills() {
       <div className="skills-grid">
         <div className="skill-bubble">
           <h3>Programming Languages</h3>
-          <p>Python, Java, JavaScript, C++</p>
+          <p>Python, Java, JavaScript, C, C++, C#</p>
         </div>
         <div className="skill-bubble">
           <h3>Web Development</h3>

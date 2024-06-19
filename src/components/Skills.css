@@ -1,14 +1,22 @@
+/* Skills Section */
 #skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   text-align: center;
-  margin: 100px 0 20px 0; /* Increase top margin, decrease bottom margin */
   padding-top: 40px;
   padding-bottom: 20px;
+  min-height: 100vh; /* Ensure the section takes at least the full viewport height */
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  width: 100%; /* Ensure the grid takes full width */
+  max-width: 1200px; /* Set a max width for larger screens */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .skill-bubble {
@@ -21,6 +29,7 @@
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .skill-bubble h3 {
@@ -65,8 +74,10 @@
     padding-top: 10px;
     padding-bottom: 5px;
   }
+
   .skills-grid {
     gap: 10px; /* Reduce gap for very small screens */
+    width: 90%; /* Ensure the grid takes full width */
   }
 
   .skill-bubble {

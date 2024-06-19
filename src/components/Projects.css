@@ -1,22 +1,28 @@
+/* Projects Section */
 #project {
   text-align: center;
-  background-color: #1a134d;
-  border-radius: 1.5rem;
-  width: 64%; /* Adjusted width for responsiveness */
-  max-width: 100%; /* Ensure it spans the full width on smaller screens */
-  margin: 20px auto; /* Center and add margin */
-  padding: 20px 10px 20px 20px; /* Reduced right padding */
-  box-sizing: border-box; /* Include padding and border in width/height */
-  height: auto; /* Make height auto for flexibility */
-  min-height: 550px; /* Ensure minimum height */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto; /* Adjust height to auto */
+  min-height: 100vh; /* Make the section take the full viewport height */
+  box-sizing: border-box; /* Include padding in the height calculation */
+  padding: 30px; /* Add padding */
 }
 
 .projects-container {
   display: flex;
   flex-direction: column; /* Stack vertically on small screens */
-  justify-content: center;
-  align-items: center; /* Center align */
   text-align: center;
+  background-color: #1a134d;
+  border-radius: 1.5rem;
+  width: 90%; /* Adjusted width for responsiveness */
+  max-width: 100%; /* Ensure it spans the full width on smaller screens */
+  margin: 20px auto; /* Center and add margin */
+  padding: 20px; /* Adjust padding */
+  box-sizing: border-box; /* Include padding and border in width/height */
+  height: 520px; /* Fixed height */
 }
 
 .tab-buttons-column {
@@ -31,10 +37,16 @@
   list-style-type: none;
   padding: 0; /* Reset padding */
   margin: 0;
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(150px, 1fr)
+  ); /* 2 columns on mobile */
+  gap: 10px; /* Space between buttons */
 }
 
 .tab-buttons-list li {
-  margin-bottom: 10px; /* Spacing between buttons */
+  margin-bottom: 0; /* Remove margin */
 }
 
 .TabButton {
@@ -47,21 +59,20 @@
   width: 100%; /* Full width */
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .tab-content {
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   width: 100%; /* Full width */
-  padding-right: 0; /* Remove right padding */
-  margin-right: 0; /* Remove right margin */
+  padding: 0 10px; /* Add padding */
 }
 
 .tab-content a {
   color: white;
   display: block;
   margin-bottom: 20px;
-  padding-top: 20px;
   font-size: 1.25rem;
 }
 
@@ -69,31 +80,32 @@
   color: #c1a9ee;
 }
 
-.description {
-  text-align: justify;
+.description,
+.skills_p {
+  text-align: justify; /* Justify text */
   margin-bottom: 20px;
+  width: 100%;
+  display: block;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
   font-size: 2rem; /* Adjust font size for better responsiveness */
-}
-
-.skills_p {
-  text-align: left;
+  margin-top: 10px;
 }
 
 /* Media queries for responsive design */
 @media (min-width: 768px) {
   .projects-container {
     flex-direction: row; /* Side by side on larger screens */
-    align-items: flex-start; /* Align items to the top */
+    justify-content: center; /* Center content horizontally */
+    padding: 35px;
+    width: 62%;
   }
 
   .tab-buttons-column {
-    margin-right: 20px; /* Margin between buttons and content */
     margin-bottom: 0; /* Remove bottom margin */
+    padding-right: 60px;
     width: auto; /* Auto width for larger screens */
   }
 
@@ -114,36 +126,52 @@ h2 {
 
 /* Media queries for phones */
 @media (max-width: 767px) {
-  #project {
-    width: 90%; /* Adjust width for smaller screens */
-    padding: 15px; /* Adjust padding for smaller screens */
-    min-height: auto; /* Adjust minimum height */
+  .tab-buttons-list {
+    text-align: center; /* Center text for buttons */
+    width: 100%;
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 10px; /* Space between buttons */
   }
 
-  h2 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-
-  .tab-content a {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .description {
-    text-align: center; /* Center text for smaller screens */
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .skills_p {
-    text-align: center; /* Center text for smaller screens */
+  .TabButton {
+    width: 100%; /* Full width for buttons */
+    max-width: 150px; /* Max width for smaller screens */
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
 }
 
-/* Media queries for smaller phones */
 @media (max-width: 480px) {
+  .tab-content {
+    padding: 0;
+    justify-self: auto;
+    display: grid;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .skills_p {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .tab-content a {
+    text-align: center;
+  }
+
+  .projects-container {
+    padding: 10px;
+    display: block;
+    height: 585px;
+    margin-top: 0;
+  }
+
+  .tab-buttons-column {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
   #project {
-    width: 90%; /* Adjust width for smaller screens */
     padding: 5px; /* Adjust padding for smaller screens */
-    min-height: auto; /* Adjust minimum height */
   }
 
   h2 {
@@ -155,11 +183,6 @@ h2 {
   }
 
   .description {
-    text-align: center; /* Center text for smaller screens */
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .skills_p {
     text-align: center; /* Center text for smaller screens */
     font-size: 1rem; /* Adjust font size for smaller screens */
   }
@@ -172,13 +195,7 @@ h2 {
 
   .TabButton {
     width: 100%; /* Full width for buttons */
-    max-width: 150px; /* Max width for larger screens */
-    box-sizing: border-box; /* Include padding and border in width */
+    max-width: 150px; /* Max width for smaller screens */
     font-size: 0.9rem; /* Adjust font size for smaller screens */
-  }
-  .tab-buttons-column {
-    margin-right: 5px; /* Margin between buttons and content */
-    margin-bottom: 0; /* Remove bottom margin */
-    width: auto; /* Auto width for larger screens */
   }
 }

@@ -6,12 +6,13 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Menuu from "./components/Menuu";
 import "./smoothScroll"; // Import smoothScroll.js for smooth scrolling
 
 export default function App() {
   return (
     <div className="App">
-      <Header />
+      <Menuu />
       <main>
         <section id="home">
           <Home />
