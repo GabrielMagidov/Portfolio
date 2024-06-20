@@ -221,3 +221,9 @@ h2 {
     margin-top: 0;
   }
 }
+
+@media (min-width: 1300px) {
+  .projects-container {
+    width: 62%;
+  }
+}
