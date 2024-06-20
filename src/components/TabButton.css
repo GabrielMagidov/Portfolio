@@ -43,8 +43,8 @@
 @media (max-width: 768px) {
   .tab-button {
     font-size: 0.9rem; /* Adjust font size for smaller screens */
-    padding: 0.8rem 1.2rem; /* Adjust padding for smaller screens */
-    max-width: 160px; /* Max width for smaller screens */
+    padding: 0.7rem 0.9rem; /* Adjust padding for smaller screens */
+    max-width: 140px; /* Max width for smaller screens */
   }
 }
 

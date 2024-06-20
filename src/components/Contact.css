@@ -40,6 +40,14 @@ p {
     height: unset;
     padding: 15px 15px 0 15px; /* Adjust padding for tablets, remove bottom padding */
   }
+  #contact {
+    height: 100vh; /* Ensure full viewport height */
+    padding: 5px 5px 0 5px; /* Adjust padding for mobile devices, remove bottom padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the entire section horizontally */
+    justify-content: center; /* Center-align the entire section vertically */
+  }
 }
 
 @media (max-width: 768px) {

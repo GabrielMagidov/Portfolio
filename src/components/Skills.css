@@ -5,8 +5,6 @@
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
   min-height: 100vh; /* Ensure the section takes at least the full viewport height */
 }
 
@@ -54,6 +52,7 @@
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr; /* Single column layout for small screens */
+    width: 80%;
   }
 
   .skill-bubble {
@@ -90,5 +89,18 @@
 
   .skill-bubble p {
     font-size: 12px; /* Adjust font size for very small screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    gap: 10px; /* Reduce gap for very small screens */
+    width: 90%; /* Ensure the grid takes full width */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    width: 85%;
   }
 }

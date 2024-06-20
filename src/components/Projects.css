@@ -95,7 +95,7 @@ h2 {
 }
 
 /* Media queries for responsive design */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .projects-container {
     flex-direction: row; /* Side by side on larger screens */
     justify-content: center; /* Center content horizontally */
@@ -121,6 +121,10 @@ h2 {
 
   h2 {
     font-size: 2.5rem; /* Increase font size for larger screens */
+  }
+  .projects-container {
+    padding: 35px;
+    width: 87%;
   }
 }
 
@@ -197,5 +201,23 @@ h2 {
     width: 100%; /* Full width for buttons */
     max-width: 150px; /* Max width for smaller screens */
     font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media ((min-width: 480px) and (max-width: 768px)) {
+  .tab-buttons-list {
+    text-align: center; /* Center text for buttons */
+    width: 100%;
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* 2 columns on mobile */
+    gap: 2px; /* Space between buttons */
+  }
+  .tab-buttons-column {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  .projects-container {
+    height: 470px;
+    margin-top: 0;
   }
 }
