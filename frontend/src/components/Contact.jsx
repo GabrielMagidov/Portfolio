@@ -39,7 +39,7 @@ export default function Contact() {
       <h2>Contact me</h2>
       <p>You can reach me through the following platforms:</p>
       <ContactLinks />
-      <h3>Or send me an email directly:</h3>
+      {/* <h3>Or send me an email directly:</h3>
       <form onSubmit={handleSubmit} className="contact-form">
         <input
           type="email"
@@ -63,7 +63,7 @@ export default function Contact() {
         ></textarea>
         <button type="submit">Send</button>
       </form>
-      {status && <p className="status-message">{status}</p>}
+      {status && <p className="status-message">{status}</p>} */}
     </section>
   );
 }
