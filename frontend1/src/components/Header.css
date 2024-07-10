@@ -1,0 +1,105 @@
+header {
+  position: static; /* Ensure the header behaves normally in the document flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* Transparent background for the header */
+  color: white; /* Text color */
+  padding: 20px 0; /* Padding for some spacing */
+  z-index: 1000; /* Ensures the header is above other elements */
+}
+
+nav ul {
+  list-style-type: none; /* Remove default list style */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: center; /* Center the navigation items */
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+nav ul li {
+  margin: 0 15px; /* Spacing between the navigation items */
+}
+
+.NavButton {
+  background: none;
+  color: white;
+  border: none;
+  box-shadow: none;
+  font-size: 25px;
+  font-weight: normal;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 1rem 2rem;
+  width: 200px;
+}
+
+.NavButton:hover {
+  background-color: #0f114e;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  .NavButton {
+    font-size: 20px; /* Adjust font size for tablets */
+    padding: 1rem 1.5rem; /* Adjust padding for tablets */
+    width: 180px; /* Adjust width for tablets */
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Adjust spacing between items for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack navigation items vertically on small screens */
+    align-items: center; /* Center align the items */
+  }
+
+  .NavButton {
+    font-size: 18px; /* Adjust font size for small screens */
+    padding: 1rem 1.2rem; /* Adjust padding for small screens */
+    width: 160px; /* Adjust width for small screens */
+    margin: 10px 0; /* Add margin between buttons on small screens */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Adjust spacing between items for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0; /* Adjust padding for mobile devices */
+  }
+
+  nav ul {
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space out items */
+  }
+
+  nav ul li {
+    width: 48%; /* Take up nearly half the width for two columns */
+    margin: 5px 0; /* Add margin between items */
+  }
+
+  .NavButton {
+    font-size: 14px; /* Adjust font size for mobile devices */
+    padding: 0.8rem 1rem; /* Adjust padding for mobile devices */
+    width: 100%; /* Full width within the li element */
+  }
+}

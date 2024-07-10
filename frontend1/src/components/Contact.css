@@ -1,0 +1,223 @@
+/* General styles for the contact section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the entire section horizontally */
+  justify-content: center; /* Center-align the entire section vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 0px 20px; /* Adjust padding for spacing, remove bottom padding */
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 3.125rem; /* Relative unit */
+  font-style: normal;
+  color: #ffffff;
+  margin-bottom: 10px; /* Adjust to reduce space below the heading */
+}
+
+p {
+  font-size: 1.5rem; /* Increase base font size */
+  text-align: center; /* Center-align the paragraph */
+  margin: 0; /* Remove default margins */
+  margin-top: 5px; /* Add a smaller margin above the paragraph */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-size: 1rem;
+}
+
+/* Styles for the contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%; /* Full width for responsive layout */
+  max-width: 500px; /* Limit the maximum width */
+  align-items: center;
+}
+
+h3 {
+  margin: 20px 0 10px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 500px; /* Default fixed width for input fields */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.contact-form textarea {
+  height: 150px; /* You can adjust the height as needed */
+  resize: none; /* Make the textarea non-resizable */
+}
+
+.contact-form button {
+  background: #0f114e;
+  color: white;
+  border: none;
+  box-shadow: none;
+  font-size: 20px;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  padding: 1rem 2rem;
+  width: 150px; /* Default fixed width for button */
+  margin: 10px auto;
+  border: white solid 2px;
+}
+
+.contact-form button:hover {
+  color: #0f114e;
+  background-color: white;
+  border: #0f114e solid 2px;
+}
+
+.status-message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  p {
+    font-size: 1.375rem; /* Adjust font size for tablets */
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem; /* Adjust heading font size for tablets */
+  }
+
+  #contact {
+    height: unset;
+    padding: 15px; /* Adjust padding for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1.25rem; /* Adjust font size for small screens */
+    padding: 0 10px; /* Add padding for better spacing on small screens */
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem; /* Adjust heading font size for small screens */
+  }
+
+  #contact {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+
+  .contact-form button {
+    width: 150px; /* Fixed width for button on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 1.125rem; /* Adjust font size for mobile devices */
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 0.75rem; /* Adjust font size for mobile devices */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust heading font size for mobile devices */
+  }
+
+  #contact {
+    height: 100vh; /* Ensure full viewport height */
+    padding: 5px; /* Adjust padding for mobile devices */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the entire section horizontally */
+    justify-content: center; /* Center-align the entire section vertically */
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 250px; /* Fixed width for input fields on mobile devices */
+  }
+
+  .contact-form button {
+    width: 120px; /* Fixed width for button on mobile devices */
+  }
+}
+
+/* Contact links styles */
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center-align links horizontally */
+  align-items: center; /* Center-align links vertically */
+  margin-top: 15px; /* Optional: Add margin to separate from section content */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.contact-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align icon and text vertically */
+  text-decoration: none;
+  color: inherit;
+  margin: 0 10px; /* Adjust horizontal spacing between links */
+  font-size: 1.25rem; /* Use rem for scalable text */
+}
+
+.contact-links a:hover {
+  color: #0f114e; /* Optional: Change color on hover */
+}
+
+/* Media queries for contact links */
+@media (max-width: 1024px) {
+  .contact-links a {
+    font-size: 1.125rem; /* Adjust icon size for tablets */
+    margin: 0 8px; /* Adjust spacing between links for tablets */
+  }
+}
+
+@media ((min-width: 480px) and (max-width: 768px)) {
+  .contact-links a {
+    font-size: 1rem; /* Adjust icon size for small screens */
+    margin: 0 5px; /* Adjust spacing between links for small screens */
+  }
+  .contact-form button {
+    font-size: 16px;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-links a {
+    font-size: 0.875rem; /* Adjust icon size for mobile devices */
+    margin: 0 5px; /* Adjust spacing between links for mobile devices */
+  }
+  .contact-form button {
+    font-size: 16px;
+    padding: 0.6rem 1rem;
+  }
+}

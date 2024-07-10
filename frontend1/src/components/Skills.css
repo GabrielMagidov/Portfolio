@@ -1,0 +1,106 @@
+/* Skills Section */
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  min-height: 100vh; /* Ensure the section takes at least the full viewport height */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%; /* Ensure the grid takes full width */
+  max-width: 1200px; /* Set a max width for larger screens */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.skill-bubble {
+  background-color: #1a134d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.skill-bubble h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.skill-bubble p {
+  margin: 0;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  height: 100%; /* Ensure full height of the bubble */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+    width: 80%;
+  }
+
+  .skill-bubble {
+    padding: 15px; /* Adjust padding for small screens */
+  }
+
+  .skill-bubble h3 {
+    font-size: 20px; /* Adjust font size for small screens */
+  }
+
+  .skill-bubble p {
+    font-size: 14px; /* Adjust font size for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #skills {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .skills-grid {
+    gap: 10px; /* Reduce gap for very small screens */
+    width: 90%; /* Ensure the grid takes full width */
+  }
+
+  .skill-bubble {
+    padding: 10px; /* Further adjust padding for very small screens */
+  }
+
+  .skill-bubble h3 {
+    font-size: 18px; /* Adjust font size for very small screens */
+  }
+
+  .skill-bubble p {
+    font-size: 12px; /* Adjust font size for very small screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    gap: 10px; /* Reduce gap for very small screens */
+    width: 90%; /* Ensure the grid takes full width */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    width: 85%;
+  }
+}

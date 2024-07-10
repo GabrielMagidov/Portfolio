@@ -1,0 +1,70 @@
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center-align links horizontally */
+  align-items: center; /* Center-align links vertically */
+  margin-top: 15px; /* Optional: Add margin to separate from section content */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.contact-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align icon and text vertically */
+  text-decoration: none;
+  color: inherit;
+  margin: 0 10px; /* Adjust horizontal spacing between links */
+  font-size: 1.25rem; /* Use rem for scalable text */
+}
+
+.contact-links a:hover {
+  color: #0f114e; /* Optional: Change color on hover */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  p {
+    font-size: 1.125rem; /* Adjust font size for tablets */
+  }
+
+  #contact {
+    padding: 15px; /* Adjust padding for tablets */
+  }
+
+  .contact-links a {
+    font-size: 1.125rem; /* Adjust icon size for tablets */
+    margin: 0 8px; /* Adjust spacing between links for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem; /* Adjust font size for small screens */
+    padding: 0 10px; /* Add padding for better spacing on small screens */
+  }
+
+  #contact {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+
+  .contact-links a {
+    font-size: 1rem; /* Adjust icon size for small screens */
+    margin: 0 5px; /* Adjust spacing between links for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 0.875rem; /* Adjust font size for mobile devices */
+  }
+
+  #contact {
+    padding: 5px; /* Adjust padding for mobile devices */
+  }
+
+  .contact-links a {
+    font-size: 0.875rem; /* Adjust icon size for mobile devices */
+    margin: 0 5px; /* Adjust spacing between links for mobile devices */
+  }
+}

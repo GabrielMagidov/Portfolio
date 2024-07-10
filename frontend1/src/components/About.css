@@ -1,0 +1,126 @@
+#about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for larger screens */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  max-width: 1100px; /* Adjust max-width to fit your layout needs */
+  width: 100%; /* Ensure content takes full width */
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.about-text {
+  text-align: justify;
+  padding-right: 20px;
+  width: 100%; /* Ensure text takes full width */
+  max-width: 650px; /* Adjust max-width to fit your layout needs */
+}
+
+.about-image {
+  width: 100%; /* Ensure image container takes full width */
+  max-width: 350px; /* Adjust max-width to fit your layout needs */
+  height: auto; /* Adjust height to auto */
+  margin-left: 20px; /* Adjust margin between text and image */
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image round */
+  border: 10px solid white;
+  object-fit: cover; /* Ensures the image covers the element without distortion */
+}
+
+h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.pText {
+  font-size: 1.5625rem; /* Use rem for scalable text */
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  #about {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .about-text {
+    font-size: 1.375rem; /* Adjust font size */
+  }
+
+  .about-image {
+    max-width: 300px; /* Adjust max-width of the image container */
+  }
+}
+
+@media ((min-width: 480px) and (max-width: 768px)) {
+  #about {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items vertically */
+    padding-top: 0;
+  }
+
+  .about-text {
+    padding-right: 0; /* Remove padding on smaller screens */
+    padding-bottom: 20px; /* Add space between text and image */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .about-image {
+    max-width: 200px; /* Adjust max-width of the image container */
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+
+  .pText {
+    font-size: 1.25rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 1.125rem; /* Adjust font size */
+    padding-bottom: 15px; /* Add more space between text and image */
+    padding: 0;
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items vertically */
+    padding-top: 0;
+  }
+
+  .about-image {
+    max-width: 175px; /* Adjust max-width of the image container */
+    padding-top: 20px;
+  }
+
+  .pText {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  #about {
+    padding: 0;
+  }
+}

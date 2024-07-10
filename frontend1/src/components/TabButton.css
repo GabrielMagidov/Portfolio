@@ -1,0 +1,57 @@
+.tab-button {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border: #0d172a solid 2px;
+  width: 200px;
+}
+
+.tab-button:hover {
+  background-color: #5b35a1;
+  color: #fff;
+}
+
+.tab-button.active {
+  background-color: #5b35a1;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px 0px inset;
+}
+
+.tab-button.active:hover {
+  background-color: #5b35a1;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    padding: 0.7rem 0.9rem; /* Adjust padding for smaller screens */
+    max-width: 140px; /* Max width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    font-size: 0.7rem; /* Adjust font size for extra small screens */
+    padding: 0.7rem 1rem; /* Adjust padding for extra small screens */
+    max-width: 120px; /* Max width for extra small screens */
+  }
+}

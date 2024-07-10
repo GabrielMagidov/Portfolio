@@ -1,0 +1,439 @@
+/* Global */
+html {
+  min-height: 100%;
+  overflow-y: auto; /* Ensure vertical scrolling */
+}
+
+section {
+  margin-top: 0;
+}
+
+/* Base styles for the button */
+.toggle-button {
+  position: fixed;
+  top: 50px;
+  left: 35px;
+  color: white;
+  background: none;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 40px; /* Increase font size */
+  padding: 10px 15px;
+  border: none;
+  box-shadow: none;
+}
+
+/* Base styles for the sidebar */
+.sidebar {
+  height: 100%;
+  width: 250px; /* Set the width of the sidebar */
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide the sidebar initially */
+  background-color: #284b63;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+/* Show the sidebar when the 'open' class is added */
+.sidebar.open {
+  left: 0;
+}
+
+/* Sidebar links */
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.sidebar nav ul li {
+  padding: 8px 0; /* Space items vertically */
+  width: 100%; /* Make items take full width */
+  text-align: center; /* Center text horizontally */
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%; /* Make links take full width */
+  padding: 8px 0; /* Add padding for better clickable area */
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #575757;
+}
+
+span {
+  font-size: 40px;
+  cursor: pointer;
+  position: fixed; /* Make the menu sticky */
+  top: 50px; /* Adjust top position */
+  left: 50px; /* Adjust left position */
+  z-index: 1001; /* Ensure it stays above other elements */
+}
+
+@media (max-width: 480px) {
+  span {
+    font-size: 30px;
+    top: 10px; /* Adjust top position */
+    left: 10px; /* Adjust left position */
+  }
+
+  .overlay-content a {
+    font-size: 25px;
+  }
+}
+
+/* Home Section */
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Ensure full viewport height */
+  box-sizing: border-box;
+}
+
+/* Typewriter Animation */
+.line-1::before {
+  content: ">>>";
+  margin-right: 8px;
+  color: #7afb4c; /* Same color as the text */
+}
+
+.line-1,
+.line-2 {
+  position: relative; /* Changed from absolute to relative */
+  width: 15em; /* Reduced the width to shorten the length */
+  margin: 0;
+  font-size: 180%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  padding-left: 8px;
+}
+
+.line-2 {
+  opacity: 0; /* Start with line 2 hidden */
+}
+
+.anim-typewriter {
+  animation: typewriter 2s steps(30) 1s 1 normal both,
+    blinkTextCursor 500ms steps(30) 2s 1 normal both;
+}
+
+.anim-typewriter2 {
+  animation: showLine 0s 3.5s 1 normal forwards;
+}
+
+@keyframes typewriter {
+  from {
+    width: 2em;
+  }
+  to {
+    width: 14em; /* Reduced the width to match the shortened length */
+  }
+}
+
+@keyframes showLine {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Terminal */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.home {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.home h1 {
+  margin-bottom: 10px; /* Adjust this value to make the gap smaller */
+  margin-top: 10px;
+}
+
+.home p {
+  margin-top: 0; /* Remove the top margin */
+}
+
+/* Terminal */
+.terminal {
+  flex: 1;
+  margin: 0 20px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 750px;
+  height: 300px; /* Increased height */
+}
+
+.terminal #bar {
+  text-align: left; /* Align content to the left */
+  width: 100%;
+  height: 25px;
+  background-color: rgb(49, 46, 46);
+  margin: 0;
+  font-family: monospace;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  padding-left: 10px; /* Add padding for spacing */
+}
+
+.terminal #red,
+.terminal #yellow,
+.terminal #green {
+  background-color: #e94b35; /* Red color for all circles by default */
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px; /* Adjust margin for spacing */
+}
+
+.terminal #yellow {
+  background-color: #f0f000;
+}
+
+.terminal #green {
+  background-color: #1aaf5c;
+}
+
+.terminal #screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+  justify-content: flex-start; /* Align items to the start */
+  width: 100%;
+  background-color: rgb(18, 17, 17);
+  color: #7afb4c;
+  padding: 8px;
+  overflow: auto;
+  border-radius: 0 0 5px 5px;
+  position: relative; /* Added for relative positioning */
+  height: calc(100% - 25px); /* Adjust the height to fill the remaining space */
+}
+
+/* CV Button */
+.cvButton {
+  background: #0f114e;
+  color: white;
+  border: none;
+  box-shadow: none;
+  font-size: 20px;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  padding: 1rem 2rem;
+  width: 200px;
+  margin: 10px auto;
+  border: white solid 2px;
+}
+
+.cvButton:hover {
+  color: #0f114e;
+  background-color: white;
+  border: #0f114e solid 2px;
+}
+
+.home_p {
+  font-size: 1.35rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .terminal {
+    margin: 20px 0; /* Center the terminal by using auto for left and right margins */
+    width: 100%;
+    height: 300px;
+  }
+
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    height: 650px;
+  }
+
+  #home {
+    padding: 10px;
+    padding-top: 0;
+  }
+}
+
+@media ((min-width: 480px) and (max-width: 768px)) {
+  .home-container {
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  #home {
+    padding-top: 0;
+  }
+
+  .home h1 {
+    margin-bottom: 5px; /* Adjust this value to make the gap smaller */
+    margin-top: 5px;
+  }
+
+  .home p {
+    margin-top: 0; /* Remove the top margin */
+    font-size: 20px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .home {
+    padding-right: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 6px;
+  }
+
+  .cvButton {
+    font-size: 16px;
+    padding: 0.6rem 1rem;
+  }
+
+  .terminal {
+    width: 100%;
+    height: 150px;
+  }
+
+  .terminal #red,
+  .terminal #yellow,
+  .terminal #green {
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px; /* Adjust margin for spacing */
+  }
+
+  .line-1,
+  .line-2 {
+    position: relative; /* Changed from absolute to relative */
+    width: 100%; /* Make the width 100% */
+    margin: 0;
+    font-size: 100%;
+    font-weight: 200;
+    padding-left: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    display: block;
+    height: auto;
+  }
+  #home {
+    padding-top: 0;
+  }
+
+  .home h1 {
+    margin-bottom: 5px; /* Adjust this value to make the gap smaller */
+    margin-top: 5px;
+  }
+
+  .home p {
+    margin-top: 0; /* Remove the top margin */
+  }
+
+  .home {
+    padding-right: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 6px;
+  }
+
+  .cvButton {
+    font-size: 16px;
+    padding: 0.6rem 1rem;
+  }
+
+  .home_p {
+    font-size: 0.875rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .terminal {
+    width: 100%;
+    height: 150px;
+  }
+
+  .terminal #red,
+  .terminal #yellow,
+  .terminal #green {
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px; /* Adjust margin for spacing */
+  }
+
+  .line-1,
+  .line-2 {
+    position: relative; /* Changed from absolute to relative */
+    width: 100%; /* Make the width 100% */
+    margin: 0;
+    font-size: 100%;
+    font-weight: 200;
+    padding-left: 3px;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 2em;
+    }
+    to {
+      width: 100%; /* Make the width 100% */
+    }
+  }
+
+  @keyframes typewriter2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* Match the original length */
+    }
+  }
+}
