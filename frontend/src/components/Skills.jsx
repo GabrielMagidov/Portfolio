@@ -16,7 +16,7 @@ export default function Skills() {
         </div>
         <div className="skill-bubble">
           <h3>Database Management</h3>
-          <p>SQL, Panda, MongoDB</p>
+          <p>SQL, Pandas, MongoDB</p>
         </div>
         <div className="skill-bubble">
           <h3>Tools and Frameworks</h3>

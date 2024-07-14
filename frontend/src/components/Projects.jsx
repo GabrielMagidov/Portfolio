@@ -8,7 +8,7 @@ import Tabs from "./Tabs.jsx";
 import "./Projects.css";
 
 export default function Projects() {
-  const [selectedTopic, setSelectedTopic] = useState("SetCardGame");
+  const [selectedTopic, setSelectedTopic] = useState("phishing_platform");
 
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton);
@@ -38,6 +38,14 @@ export default function Projects() {
         <div className="projects-container">
           <div className="tab-buttons-column">
             <ul className="tab-buttons-list">
+              <li>
+                <TabButton
+                  isSelected={selectedTopic === "phishing_platform"}
+                  onSelect={() => handleSelect("phishing_platform")}
+                >
+                  Phishing
+                </TabButton>
+              </li>
               <li>
                 <TabButton
                   isSelected={selectedTopic === "SetCardGame"}

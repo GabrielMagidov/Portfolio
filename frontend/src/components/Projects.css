@@ -1,62 +1,55 @@
-/* Projects Section */
 #project {
   text-align: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto; /* Adjust height to auto */
-  min-height: 100vh; /* Make the section take the full viewport height */
-  box-sizing: border-box; /* Include padding in the height calculation */
-  padding: 30px; /* Add padding */
+  height: auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 30px;
 }
 
 .projects-container {
   display: flex;
-  flex-direction: column; /* Stack vertically on small screens */
+  flex-direction: column;
   text-align: center;
   background-color: #1a134d;
   border-radius: 1.5rem;
-  width: 90%; /* Adjusted width for responsiveness */
-  max-width: 100%; /* Ensure it spans the full width on smaller screens */
-  margin: 20px auto; /* Center and add margin */
-  padding: 20px; /* Adjust padding */
-  box-sizing: border-box; /* Include padding and border in width/height */
-  height: 520px; /* Fixed height */
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .tab-buttons-column {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px; /* Space between buttons and content on small screens */
-  width: 100%; /* Full width for smaller screens */
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .tab-buttons-list {
   list-style-type: none;
-  padding: 0; /* Reset padding */
+  padding: 0;
   margin: 0;
-  display: grid; /* Use CSS Grid */
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(150px, 1fr)
-  ); /* 2 columns on mobile */
-  gap: 10px; /* Space between buttons */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
 }
 
 .tab-buttons-list li {
-  margin-bottom: 0; /* Remove margin */
+  margin-bottom: 0;
 }
 
 .TabButton {
-  width: 100%; /* Full width for buttons */
-  max-width: 200px; /* Max width for larger screens */
-  box-sizing: border-box; /* Include padding and border in width */
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
 }
 
 .tab-content-container {
-  width: 100%; /* Full width */
+  width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -64,9 +57,8 @@
 
 .tab-content {
   text-align: center;
-  max-width: 900px;
-  width: 100%; /* Full width */
-  padding: 0 10px; /* Add padding */
+  width: 100%;
+  padding: 0 10px;
 }
 
 .tab-content a {
@@ -82,66 +74,65 @@
 
 .description,
 .skills_p {
-  text-align: justify; /* Justify text */
+  text-align: justify;
   margin-bottom: 20px;
-  width: 100%;
   display: block;
+  min-width: 100%;
 }
 
 h2 {
   text-align: center;
-  font-size: 2rem; /* Adjust font size for better responsiveness */
+  font-size: 2rem;
   margin-top: 10px;
 }
 
-/* Media queries for responsive design */
-@media (min-width: 769px) {
+@media (min-width: 821px) {
   .projects-container {
-    flex-direction: row; /* Side by side on larger screens */
-    justify-content: center; /* Center content horizontally */
+    flex-direction: row;
+    justify-content: center;
     padding: 35px;
     width: 62%;
   }
 
   .tab-buttons-column {
-    margin-bottom: 0; /* Remove bottom margin */
+    margin-bottom: 0;
     padding-right: 60px;
-    width: auto; /* Auto width for larger screens */
+    width: auto;
   }
 
   .TabButton {
-    width: 200px; /* Fixed width for larger screens */
+    width: 200px;
   }
 }
 
 @media (min-width: 1024px) {
   #project {
-    padding: 30px; /* Adjust padding for larger screens */
+    padding: 30px;
   }
 
   h2 {
-    font-size: 2.5rem; /* Increase font size for larger screens */
+    font-size: 2.5rem;
   }
+
   .projects-container {
     padding: 35px;
     width: 87%;
   }
 }
 
-/* Media queries for phones */
-@media (max-width: 767px) {
+@media (max-width: 821px) {
   .tab-buttons-list {
-    text-align: center; /* Center text for buttons */
+    text-align: center;
     width: 100%;
-    display: grid; /* Use CSS Grid */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 10px; /* Space between buttons */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .TabButton {
-    width: 100%; /* Full width for buttons */
-    max-width: 150px; /* Max width for smaller screens */
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    width: 100%;
+    max-width: 150px;
+    font-size: 0.9rem;
   }
 }
 
@@ -166,7 +157,6 @@ h2 {
   .projects-container {
     padding: 10px;
     display: block;
-    height: 585px;
     margin-top: 0;
   }
 
@@ -174,56 +164,58 @@ h2 {
     padding-top: 10px;
     margin-bottom: 10px;
   }
+
   #project {
-    padding: 5px; /* Adjust padding for smaller screens */
+    padding: 5px;
   }
 
   h2 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    font-size: 1.5rem;
   }
 
   .tab-content a {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1rem;
   }
 
   .description {
-    text-align: center; /* Center text for smaller screens */
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    text-align: center;
+    font-size: 1rem;
   }
 
   .tab-buttons-list,
   .tab-buttons-list li {
-    text-align: center; /* Center text for buttons */
+    text-align: center;
     width: 100%;
   }
 
   .TabButton {
-    width: 100%; /* Full width for buttons */
-    max-width: 150px; /* Max width for smaller screens */
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    width: 100%;
+    max-width: 150px;
+    font-size: 0.9rem;
   }
 }
 
-@media ((min-width: 480px) and (max-width: 768px)) {
+@media ((min-width: 480px) and (max-width: 769px)) {
   .tab-buttons-list {
-    text-align: center; /* Center text for buttons */
+    text-align: center;
     width: 100%;
-    display: grid; /* Use CSS Grid */
-    grid-template-columns: repeat(4, 1fr); /* 2 columns on mobile */
-    gap: 2px; /* Space between buttons */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
   }
+
   .tab-buttons-column {
     padding-bottom: 20px;
     margin-bottom: 0;
   }
+
   .projects-container {
-    height: 470px;
     margin-top: 0;
   }
 }
 
 @media (min-width: 1300px) {
   .projects-container {
-    width: 62%;
+    width: 75%;
   }
 }

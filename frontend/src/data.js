@@ -9,7 +9,7 @@ export const PROJECTS = {
   ClientServer: {
     title: "Client Server",
     description:
-      "This project integrates client-side (C++) and server-side (Java) components to create a versatile interactive system, with the client-side managing user interactions and communication with the server, and the server-side supporting multiple communication models for robust and scalable operations. The server can operate using a Thread-per-Client model for dedicated thread management or the reactor pattern for event-driven scalability, demonstrating proficiency in C++ and Java, and offering flexibility to enhance responsiveness in interactive applications.",
+      "Developed a community-led World Cup update subscription service with a Java-based server providing STOMP services and supporting Thread-Per-Client and Reactor server patterns. The C++ client enables users to log in, join game channels, report events, and receive real-time updates. Implemented STOMP protocol communication, message frame handling, and client-server interactions for timely notifications.",
     skills: "C++, Java, Client-Server Architecture",
     link: "https://github.com/GabrielMagidov/Client-Server",
   },
@@ -26,5 +26,12 @@ export const PROJECTS = {
       "This portfolio, built with JavaScript, React, and CSS, highlights my front-end development skills. It features a clean, responsive design and interactive user experiences, showcasing my ability to create modern web applications.",
     skills: "JavaScript, React, CSS",
     link: "https://github.com/GabrielMagidov/Portfolio",
+  },
+  phishing_platform: {
+    title: "Phishing platform",
+    description:
+      "This is a sophisticated phishing platform designed to mimic a legitimate ecommerce website selling Steam game codes. The backend, built with Express.js, captures purchase data and uses a Telegram bot to distribute the stolen information. The frontend, crafted to resemble a genuine online store, features security images, a countdown timer for discounts, and input validation to enhance authenticity. Upon purchase, customers receive a confirmation email with a fake Steam key, generated using Mailjet, to delay their realization of the scam. This project explores the integration of new technologies and strategic promotion within the gaming community to effectively execute phishing attacks.",
+    skills: "JavaScript, React, CSS, Node.js, Express.js, Python",
+    link: "https://github.com/GabrielMagidov/Phishing_platform",
   },
 };
