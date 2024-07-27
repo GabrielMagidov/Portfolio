@@ -56,6 +56,14 @@ export default function Projects() {
               </li>
               <li>
                 <TabButton
+                  isSelected={selectedTopic === "algotrading"}
+                  onSelect={() => handleSelect("algotrading")}
+                >
+                  Algotrading
+                </TabButton>
+              </li>
+              <li>
+                <TabButton
                   isSelected={selectedTopic === "ClientServer"}
                   onSelect={() => handleSelect("ClientServer")}
                 >

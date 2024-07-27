@@ -34,4 +34,12 @@ export const PROJECTS = {
     skills: "JavaScript, React, CSS, Node.js, Express.js, Python",
     link: "https://github.com/GabrielMagidov/Phishing_platform",
   },
+  algotrading: {
+    title: "Algotrading",
+    description:
+      "Developed an algorithmic trading project using Amazon's Chronos AI model and the STC technical indicator to generate and refine trading signals. The project included comprehensive backtesting to validate trading strategies and detailed configuration management to ensure compatibility and performance. This integration of AI with technical analysis provided a robust approach to predicting market trends and optimizing trading decisions.",
+    skills:
+      "Python, Algorithmic Trading, AI/ML Model Integration, Data Analysis",
+    link: "https://github.com/GabrielMagidov/Algotrading",
+  },
 };
